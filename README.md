@@ -2,7 +2,7 @@ Pharmacy Management System (Visual Basic .NET)
 
 The Pharmacy Management System is a comprehensive software solution designed to streamline and automate the operations of a pharmacy. This system aims to enhance efficiency, accuracy, and overall management within a pharmacy setting. It is built to serve the needs of pharmacists, administrators, and customers alike.
 
-Key Features:
+**Key Features:**
 
 User-Friendly Interface: The system provides an intuitive and easy-to-use interface, ensuring smooth navigation for users with varying levels of technical expertise.
 
@@ -24,7 +24,7 @@ Reporting and Analytics: Generate reports and analytics to gain insights into sa
 
 Alerts and Notifications: Receive alerts for low stock, expiring medicines, and other critical events, allowing proactive management.
 
-Technology Stack:
+**Technology Stack:**
 
 Frontend: Utilizes a user-friendly and responsive frontend built with [Insert Frontend Technologies].
 
