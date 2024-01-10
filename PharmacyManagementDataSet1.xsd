@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PharmacyManagementDataSet1" targetNamespace="http://tempuri.org/PharmacyManagementDataSet1.xsd" xmlns:mstns="http://tempuri.org/PharmacyManagementDataSet1.xsd" xmlns="http://tempuri.org/PharmacyManagementDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PharmacyDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PharmacyDBConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Pharmacy_Management_System.My.MySettings.GlobalReference.Default.PharmacyDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CartTableAdapter" GeneratorDataComponentClassName="CartTableAdapter" Name="Cart" UserDataComponentName="CartTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PharmacyDBConnectionString (MySettings)" DbObjectName="PharmacyManagement.dbo.Cart" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Quantity FROM dbo.Cart</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MedicinesTableAdapter" GeneratorDataComponentClassName="MedicinesTableAdapter" Name="Medicines" UserDataComponentName="MedicinesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PharmacyDBConnectionString (MySettings)" DbObjectName="PharmacyManagement.dbo.Medicines" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MedicineName, Price FROM dbo.Medicines</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MedicineName" DataSetColumn="MedicineName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PharmacyManagementDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PharmacyManagementDataSet1" msprop:Generator_UserDSName="PharmacyManagementDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cart" msprop:Generator_TableClassName="CartDataTable" msprop:Generator_TableVarName="tableCart" msprop:Generator_TablePropName="Cart" msprop:Generator_RowDeletingName="CartRowDeleting" msprop:Generator_RowChangingName="CartRowChanging" msprop:Generator_RowEvHandlerName="CartRowChangeEventHandler" msprop:Generator_RowDeletedName="CartRowDeleted" msprop:Generator_UserTableName="Cart" msprop:Generator_RowChangedName="CartRowChanged" msprop:Generator_RowEvArgName="CartRowChangeEvent" msprop:Generator_RowClassName="CartRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Medicines" msprop:Generator_TableClassName="MedicinesDataTable" msprop:Generator_TableVarName="tableMedicines" msprop:Generator_TablePropName="Medicines" msprop:Generator_RowDeletingName="MedicinesRowDeleting" msprop:Generator_RowChangingName="MedicinesRowChanging" msprop:Generator_RowEvHandlerName="MedicinesRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicinesRowDeleted" msprop:Generator_UserTableName="Medicines" msprop:Generator_RowChangedName="MedicinesRowChanged" msprop:Generator_RowEvArgName="MedicinesRowChangeEvent" msprop:Generator_RowClassName="MedicinesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MedicineName" msprop:Generator_ColumnVarNameInTable="columnMedicineName" msprop:Generator_ColumnPropNameInRow="MedicineName" msprop:Generator_ColumnPropNameInTable="MedicineNameColumn" msprop:Generator_UserColumnName="MedicineName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
